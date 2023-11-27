@@ -6,9 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/*
+какой-то коммент
+rffffd
+ */
 
 public class Human {
     private long id;
+
     private String name;
     private Gender gender;
     private LocalDate birthDate;
