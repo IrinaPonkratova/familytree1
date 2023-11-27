@@ -8,6 +8,7 @@ import java.util.Objects;
 
 /*
 какой-то коммент
+
  */
 public class Human {
     private long id;
