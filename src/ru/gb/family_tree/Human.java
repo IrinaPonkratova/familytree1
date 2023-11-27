@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /*
 какой-то коммент
-rfff
+rffffd
  */
 
 public class Human {
