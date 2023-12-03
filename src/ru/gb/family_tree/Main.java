@@ -28,5 +28,19 @@ public class Main {
 
     }
 
+    public static void save(FamilyTree familyTree) {
+        String path = "test.txt";
+        ru.gb.family_tree.writer.FileHandler fileHandler = new ru.gb.family_tree.writer.FileHandler();
+        fileHandler.save(familyTree, path);
+
+    }
+
+    public  static FamilyTree load() {
+        String path = "test.txt";
+        ru.gb.family_tree.writer.FileHandler fileHandler = new ru.gb.family_tree.writer.FileHandler();
+        return (FamilyTree) fileHandler.read(path);
+    }
+
+
 
 }
