@@ -8,7 +8,7 @@ import java.util.List;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        FamilyTree familytree = new FamilyTree();
+   /*     FamilyTree familytree = new FamilyTree();
         Human Maria = new Human("Maria", Gender.Female, LocalDate.of(1950, 7, 24));
         Human Ivan = new Human("Ivan", Gender.Male, LocalDate.of(1952, 2, 24));
         Human Galina = new Human("Galina", Gender.Female, LocalDate.of(1943, 6, 17));
@@ -26,6 +26,13 @@ public class Main {
 
         System.out.println(familytree);
         save(familytree);
+        */
+
+
+        FamilyTree familytree = load();
+        System.out.print(familytree);
+
+
 
 
 
