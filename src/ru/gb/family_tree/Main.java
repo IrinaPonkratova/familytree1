@@ -59,6 +59,7 @@ public class Main {
 
         familytree.addRalative(Nastya);
         return familytree;
+
     }
 
 
