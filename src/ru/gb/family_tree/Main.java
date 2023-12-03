@@ -25,6 +25,9 @@ public class Main {
 
 
         System.out.println(familytree);
+        save(familytree);
+
+
 
     }
 
