@@ -1,11 +1,10 @@
-package ru.gb.family_tree;
+package ru.gb.family_tree.Human;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 public class Human implements Serializable {

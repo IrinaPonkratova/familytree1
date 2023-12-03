@@ -1,7 +1,5 @@
 package ru.gb.family_tree.writer;
 
-import ru.gb.family_tree.Human;
-
 
 import java.io.Serializable;
 

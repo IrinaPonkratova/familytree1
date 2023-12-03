@@ -1,4 +1,6 @@
 package ru.gb.family_tree;
+import ru.gb.family_tree.Human.Human;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
