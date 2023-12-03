@@ -1,7 +1,9 @@
-package ru.gb.family_tree;
+package ru.gb.family_tree.Main;
 
+import ru.gb.family_tree.FamilyTree.FamilyTree;
 import ru.gb.family_tree.Human.Gender;
 import ru.gb.family_tree.Human.Human;
+import ru.gb.family_tree.writer.FileHandler;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -19,6 +21,14 @@ public class Main {
         System.out.print(familytree);
 
  */
+        familytree.sortByName();
+        System.out.println(familytree);
+
+        familytree.sortByAge();
+        System.out.println(familytree);
+
+        familytree.sortByGenger();
+        System.out.println(familytree);
 
 
 
