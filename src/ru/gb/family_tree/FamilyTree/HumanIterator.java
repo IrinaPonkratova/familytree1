@@ -4,13 +4,13 @@ import ru.gb.family_tree.Human.Human;
 
 import java.util.Iterator;
 import java.util.List;
-public class HumanIterator implements Iterator<Human> {
+public class HumanIterator<E> implements Iterator<E> {
     private int index;
-    private List<Human> familytree;
+    private List<E> familytree;
 
 
 
-    public HumanIterator(List<Human> familytree) {
+    public HumanIterator(List<E> familytree) {
         this.familytree = familytree;
     }
 
@@ -20,7 +20,7 @@ public class HumanIterator implements Iterator<Human> {
     }
 
     @Override
-    public Human next() {
+    public E next() {
         return familytree.get(index++);
     }
 }

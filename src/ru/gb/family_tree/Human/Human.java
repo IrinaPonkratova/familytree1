@@ -1,5 +1,7 @@
 package ru.gb.family_tree.Human;
 
+import ru.gb.family_tree.FamilyTree.TreeItem;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
@@ -7,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Human implements Serializable, Comparable<Human> {
+public class Human implements Comparable<Human>, TreeItem<Human> {
     private long id;
     private String name;
     private Gender gender;
@@ -37,6 +39,7 @@ public class Human implements Serializable, Comparable<Human> {
     public Human(String name, Gender gender, LocalDate birthDate, Human mother, Human father){
         this(name, gender, birthDate, null, mother, father);
     }
+
     public void addChildren(Human child) {
         if (!children.contains(child)) {
             children.add(child);
@@ -126,9 +129,12 @@ public class Human implements Serializable, Comparable<Human> {
         return deathDate;
     }
 
+
     public List<Human> getChildren() {
         return children;
     }
+
+
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
