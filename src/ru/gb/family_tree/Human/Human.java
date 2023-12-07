@@ -1,13 +1,15 @@
-package ru.gb.family_tree;
+package ru.gb.family_tree.Human;
 
+import ru.gb.family_tree.FamilyTree.TreeItem;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
-public class Human {
+public class Human implements Comparable<Human>, TreeItem<Human> {
     private long id;
     private String name;
     private Gender gender;
@@ -37,6 +39,7 @@ public class Human {
     public Human(String name, Gender gender, LocalDate birthDate, Human mother, Human father){
         this(name, gender, birthDate, null, mother, father);
     }
+
     public void addChildren(Human child) {
         if (!children.contains(child)) {
             children.add(child);
@@ -85,7 +88,7 @@ public class Human {
         return list;
     }
 
-    private int getAge(){
+    public int getAge(){
         if (deathDate == null) {
             return getPeriod(birthDate, LocalDate.now());
         } else {
@@ -126,9 +129,12 @@ public class Human {
         return deathDate;
     }
 
+
     public List<Human> getChildren() {
         return children;
     }
+
+
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
@@ -239,5 +245,10 @@ public class Human {
         }
         Human human = (Human) obj;
         return human.getId() == getId();
+    }
+
+    @Override
+    public int compareTo(Human o) {
+        return this.name.compareTo(o.getName());
     }
 }
